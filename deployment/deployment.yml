@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: srin-api-express-deployment
+  labels:
+    app: srin-api-express
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: srin-api-express
+  template:
+    metadata:
+      labels:
+        app: srin-api-express
+    spec:
+      containers:
+        - name: srin-api-express
+          image: fahrulalwan/srin-api-express:latest
+          ports:
+            - containerPort: 3000
