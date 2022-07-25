@@ -25,13 +25,13 @@ const options = {
     apis: ["./routes/*.js"],
 };
 
-const MongoClient = require('mongodb').MongoClient
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser')
 const logger = require('morgan');
 const swaggerUi = require('swagger-ui-express');
+const MongoClient = require('mongodb').MongoClient
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerSpec = swaggerJSDoc(options);
 
@@ -44,10 +44,8 @@ const app = express();
 //
 // console.log('Connected to Database')
 // const db = client.db('srin-db')
+// const quotesCollection = db.collection('quotes')
 //     })
-
-const quotesCollection = db.collection('quotes')
-
 
 app.use(logger('dev'));
 app.use(express.json());

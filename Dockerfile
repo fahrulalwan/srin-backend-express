@@ -2,8 +2,8 @@ FROM node:lts-alpine as build-step
 RUN mkdir /app
 WORKDIR /app
 COPY . /app
-RUN npm install
+RUN npm ci
 COPY . .
 RUN npm cache clean --force
-RUN npm run start
 EXPOSE 3000
+CMD ["npm", "start"]
