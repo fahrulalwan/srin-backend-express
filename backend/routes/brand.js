@@ -1,25 +1,64 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-
-/* GET brand. */
-router.get('/', (req, res, next) => {
-  res.send('Hello World')
+/**
+ * @openapi
+ * /brands:
+ *   get:
+ *     tags:
+ *      - brands
+ *     description: Get Brand API
+ *     responses:
+ *       200:
+ *         description: Returns a mysterious string.
+ */
+router.get("/", (req, res, next) => {
+  res.send("Get Brand API");
 });
 
-/* POST brand. */
-router.post('/', (req, res, next) => {
-  res.send(req.body)
+/**
+ * @openapi
+ * /brands:
+ *   post:
+ *     tags:
+ *      - brands
+ *     description: Post Brand API
+ *     responses:
+ *       200:
+ *         description: Returns a mysterious string.
+ */
+router.post("/", (req, res, next) => {
+  res.send("Post Brand API");
 });
 
-/* PUT brand. */
-router.put('/', (req, res, next) => {
-  res.send('Hello World')
+/**
+ * @openapi
+ * /brands:
+ *   put:
+ *     tags:
+ *      - brands
+ *     description: Put Brand API
+ *     responses:
+ *       200:
+ *         description: Returns a mysterious string.
+ */
+router.put("/", (req, res, next) => {
+  res.send("Put Brand API");
 });
 
-/* DELETE brand. */
-router.delete('/', (req, res, next) => {
-  res.send('Hello World')
+/**
+ * @openapi
+ * /brands:
+ *   delete:
+ *    tags:
+ *      - brands
+ *    description: Delete Brand API
+ *    responses:
+ *       200:
+ *         description: Returns a mysterious string.
+ */
+router.delete("/", (req, res, next) => {
+  res.send("Delete Brand API");
 });
 
 module.exports = router;
